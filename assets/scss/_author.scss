@@ -1,0 +1,44 @@
+// = author styles =
+// ===============================================
+
+.author{
+
+    
+
+    &__info{
+
+        background: $neutralLighter;
+        padding: 2rem;
+
+        a {
+            color: $themeDark;
+            text-decoration: underline;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+        
+            &:visited{
+                color: $themeDark;
+            }
+        
+            &:hover{
+        
+                color: $themeTertiary;
+            }
+        }
+
+        &__photo{
+
+            @include flexbox{
+
+                flex-direction: column;
+            }
+        }
+        &__text{
+
+            @include flexbox{
+
+                flex-direction: column;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,165 @@
+// = posts styles (single.php) =
+// ===============================
+
+
+.post{ 
+
+    @include flexbox{
+
+        width: 80vw;   
+        flex-direction: column;
+    };
+
+    &__header{
+
+        &__meta{
+
+            margin-top: 1rem;
+            @include flexbox{
+                flex-direction: column;
+            };
+
+            &__group{
+                
+                @include flexbox{
+                    flex-direction: row;
+                };
+            }
+
+            &__category{
+
+                a{
+                    text-decoration: none;
+                    color: $themePrimary;
+                }
+            }
+
+            &__tags{ 
+
+                margin-top: .5rem;
+                white-space: wrap;
+
+                a{
+
+                    text-decoration: none;
+                    color: $themePrimary;
+                    
+                    &:before{
+                        content: "#";
+                    }
+                }
+            }
+        }
+    }
+
+    &__content{
+
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        margin-top: 1.5rem;
+
+        a {
+            color: $themeDark;
+            text-decoration: underline;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+        
+            &:visited{
+                color: $themeDark;
+            }
+        
+            &:hover{
+        
+                color: $themeTertiary;
+            }
+        }
+
+        pre{
+
+            background-color: $neutralLighter;
+
+        }
+
+        li{
+
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul{
+
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ol{
+
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+    }
+
+    &__footer{
+
+        margin-top: 40px;
+        @include flexbox{
+
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+        
+        &__author{
+
+            background: $neutralLighter;
+            padding: 2rem;
+            font-size: 1.2rem;
+
+            @include flexbox{
+
+                flex-direction: row;
+                align-items: flex-start;
+
+            }
+
+            @include for-size('tablet'){
+
+                @include flexbox{
+
+                    flex-direction: column;
+                }
+            }
+
+            &__data{
+
+                margin-left: 2rem;
+
+                @include for-size('tablet'){
+
+                    margin: 1rem 0 0 0;
+                    @include flexbox{
+                        flex-direction: column;
+                    };
+                }
+
+                &__name{
+
+                    color: $themePrimary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+.avatar{
+
+    border-color: $themeDarker;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    
+}

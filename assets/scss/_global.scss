@@ -1,0 +1,142 @@
+// = global styles =
+// ===============================================
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+
+    margin: 0;
+    height: 100%;
+}
+
+body{
+
+    min-height: 100%;
+    @include flexbox{
+
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+
+    font-weight: normal;
+    color: $themePrimary;
+    margin: 2rem 0 0 0;
+}
+
+div.syntaxhighlighter {
+    overflow-x: scroll !important;
+    overflow-y: auto;
+    width: 80vw !important;
+} 
+
+.main{
+
+    margin: 50px 0;
+    width: 90vw;
+    max-width: 1000px;
+
+    @include flexbox{
+
+        flex-direction: column;
+    };
+
+    .error--404{
+        max-width: 80vw;
+    }
+
+    &__header{ 
+
+        @include flexbox{
+
+            justify-content: top;
+            flex-direction: column;
+        }
+
+        h1{
+
+            color: $themePrimary;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+
+        p{
+
+            margin: 2rem 0 0 0;
+            text-align: center;
+        }
+
+        img{
+
+            margin-top: 2.5rem;
+            width: 120px;
+        }
+    }
+
+    footer{
+
+        margin-top: 2.5rem; 
+    }
+
+    .wp-post-image{
+
+        @include for-size('tablet'){
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+pre{
+    overflow-x: auto;
+    max-width: 768px;
+}
+
+//Deprecated.
+a.effect{
+    color: $themeDark;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+    z-index: 0;
+    
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: -.1em;
+        width: 100%;
+        left: 0;
+        background: $themePrimary;
+        height: .1em;
+        width: 100%;
+        z-index: -1;
+        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
+    }
+
+    &:visited{
+        color: $themeDark;
+    }
+
+    &:hover{
+
+        color: $white;
+        &:after{
+            height: 100%;
+        }
+    }
+}
+
+
