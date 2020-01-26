@@ -1,0 +1,18 @@
+$bg_color: #2d2c2c;
+$dark_table_color: #201f1f;
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $bg_color;
+    color: #ffffff !important;
+  }
+  .post__footer__author,
+  .author__info {
+    background: $dark_table_color;
+  }
+  .footer {
+    filter: invert(100%);
+  }
+  .has-background {
+    background: $bg_color !important;
+  }
+}
